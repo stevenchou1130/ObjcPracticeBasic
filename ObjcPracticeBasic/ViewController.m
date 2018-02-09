@@ -16,10 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self enumPractice];
+
+    [self gotoPractice];
 }
 
+// MARK: Enum
+// enum 在給值時, 也可以給 index 值, 系統會自動判斷
 -(void)enumPractice {
     typedef NS_ENUM(NSUInteger, PlayerState) {
         PlayerStateOff,     // 0
@@ -42,6 +44,25 @@
             NSLog(@"NULL");
             break;
     }
+}
+
+// MARK: goto
+// goto: 會強制改變程式執行的順序
+// Statement: 標籤
+// 如果 goto Statement1, Statement2 的程式也會跑到
+-(void)gotoPractice {
+
+    NSLog(@"Start");
+    goto Statement1;
+    NSLog(@"Ya");
+
+Statement1:
+    NSLog(@"1");
+
+Statement2:
+    NSLog(@"2");
+
+    NSLog(@"End");
 }
 
 @end
