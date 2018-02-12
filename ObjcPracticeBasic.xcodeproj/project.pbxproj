@@ -13,6 +13,8 @@
 		DBE4D7DA202D8E2A008465D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBE4D7D9202D8E2A008465D4 /* Assets.xcassets */; };
 		DBE4D7DD202D8E2A008465D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBE4D7DB202D8E2A008465D4 /* LaunchScreen.storyboard */; };
 		DBE4D7E0202D8E2A008465D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE4D7DF202D8E2A008465D4 /* main.m */; };
+		DBE4D7EB20319915008465D4 /* car.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE4D7EA20319915008465D4 /* car.m */; };
+		DBE4D7EE2031999C008465D4 /* carChild.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE4D7ED2031999C008465D4 /* carChild.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		DBE4D7DC202D8E2A008465D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBE4D7DE202D8E2A008465D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBE4D7DF202D8E2A008465D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DBE4D7E920319915008465D4 /* car.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = car.h; sourceTree = "<group>"; };
+		DBE4D7EA20319915008465D4 /* car.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = car.m; sourceTree = "<group>"; };
+		DBE4D7EC2031999C008465D4 /* carChild.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = carChild.h; sourceTree = "<group>"; };
+		DBE4D7ED2031999C008465D4 /* carChild.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = carChild.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,10 @@
 				DBE4D7DB202D8E2A008465D4 /* LaunchScreen.storyboard */,
 				DBE4D7DE202D8E2A008465D4 /* Info.plist */,
 				DBE4D7DF202D8E2A008465D4 /* main.m */,
+				DBE4D7E920319915008465D4 /* car.h */,
+				DBE4D7EA20319915008465D4 /* car.m */,
+				DBE4D7EC2031999C008465D4 /* carChild.h */,
+				DBE4D7ED2031999C008465D4 /* carChild.m */,
 			);
 			path = ObjcPracticeBasic;
 			sourceTree = "<group>";
@@ -144,6 +154,8 @@
 			files = (
 				DBE4D7D5202D8E2A008465D4 /* ViewController.m in Sources */,
 				DBE4D7E0202D8E2A008465D4 /* main.m in Sources */,
+				DBE4D7EB20319915008465D4 /* car.m in Sources */,
+				DBE4D7EE2031999C008465D4 /* carChild.m in Sources */,
 				DBE4D7D2202D8E2A008465D4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
