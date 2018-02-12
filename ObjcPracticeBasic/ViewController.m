@@ -17,7 +17,64 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self gotoPractice];
+    [self dictionaryPractice];
+}
+
+// MARK: Dictionary
+-(void)dictionaryPractice {
+    int i = 29744;
+    float f = 45064.99;
+    NSDictionary *prices = @{ @"Mercedes-Benz SLK250" : [NSDecimalNumber decimalNumberWithString: @"42900.00"],
+                              @"Mercedes-Benz E350" : [NSDecimalNumber decimalNumberWithString: @"51000.00"],
+                              @"BMW M3 Coupe" : [NSDecimalNumber decimalNumberWithString: @"62000.00"],
+                              @"BMW X6" : @"no more",
+                              @"Toyota Camery XLE" : [NSNumber numberWithInteger: i],
+                              @"Acura RLX Sedan" : [NSNumber numberWithFloat: f],
+                             };
+
+    for (id key in prices) {
+        NSLog(@"There are %@ %@'s in stock", prices[key], key);
+    }
+//    NSLog(@"-------------------------");
+//    NSLog(@"%@", prices[@"BMW M3 Coupe"]);
+
+
+}
+
+// MARK: Array
+-(void)arrayPractice {
+    NSArray *myArray = [NSArray arrayWithObjects: @"a", @"b", @"c", nil];   // init
+    NSInteger t_Find = [myArray indexOfObject: @"b"];   // find data
+    NSLog(@"b is index %ld object", (long)t_Find);
+
+    NSUInteger tlen = [myArray count];
+    NSLog(@"there are %lu objects in the array", (unsigned long)tlen);
+
+    // MARK: NSMutableArray
+    // 可以動態新增 addObject / 刪除 removeObjectAtIndex 資料
+    NSMutableArray* sortedArray = [[NSMutableArray alloc] init];
+    [sortedArray addObject: @"Alice"];
+    [sortedArray addObject: @"Beth"];
+    [sortedArray addObject: @"Carol"];
+    [self printArray: sortedArray];
+
+    // Add Object
+    [sortedArray insertObject: @"Tom" atIndex: 1];
+    [self printArray: sortedArray];
+
+    // Remove
+    [sortedArray removeObjectAtIndex: 2];
+    [self printArray:sortedArray];
+}
+
+-(void) printArray: (NSMutableArray *)array {
+    NSLog(@"----------------------------------");
+
+    int i = 0;
+    while (i < [array count]) {
+        NSLog(@"Object%d = %@", i, array[i]);
+        i++;
+    }
 }
 
 // MARK: Enum
