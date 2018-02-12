@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self dictionaryPractice];
+    [self mutalbeDictionaryPractice];
 }
 
 // MARK: Dictionary
@@ -37,8 +37,31 @@
     }
 //    NSLog(@"-------------------------");
 //    NSLog(@"%@", prices[@"BMW M3 Coupe"]);
+}
 
+// MARK: Mutable Dictionary
+-(void)mutalbeDictionaryPractice {
+    int i = 29744;
+    float f = 45064.99;
 
+    NSMutableDictionary *prices = [NSMutableDictionary dictionary];
+
+    [prices setObject: [NSDecimalNumber decimalNumberWithString: @"42900.00"] forKey: @"Mercedes-Benz SLK250"];
+    [prices setObject: [NSDecimalNumber decimalNumberWithString: @"51000.00"] forKey: @"Mercedes-Benz E350"];
+    [prices setObject: [NSDecimalNumber decimalNumberWithString: @"62000.00"] forKey: @"BMW M3 Coupe"];
+    [prices setObject: @"no more" forKey: @"BMW X6"];
+    [prices setObject: [NSNumber numberWithInteger: i] forKey: @"Toyota Camery XLE"];
+    [prices setObject: [NSNumber numberWithFloat: f] forKey: @"Acura RLX Sedan"];
+
+    // 刪除
+    [prices removeObjectForKey: @"Mercedes-Benz E350"];
+
+    for (id key in prices) {
+        NSLog(@"There are %@ %@'s in stock", prices[key], key);
+    }
+
+    NSLog(@"-------------------------");
+    NSLog(@"%@", prices[@"BMW M3 Coupe"]);
 }
 
 // MARK: Array
